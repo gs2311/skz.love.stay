@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title"><h1>회원가입</h1></div>
+        <!-------------------------------------------------------------------------------------------->
+        <div class="email">
+            <input id="email" type="text" placeholder="이메일을 입력해주세요.">
+            <div id="email_error" class="error"></div>
+        </div>
+        <!-------------------------------------------------------------------------------------------->
+        <div class="name">
+            <input id="name" type="text" placeholder="이름을 입력해주세요.">
+            <div id="name_error" class="error"></div>
+        </div>
+        <!-------------------------------------------------------------------------------------------->
+        <div class="password">
+            <input id="password" type="password" placeholder="비밀번호를 입력해주세요.">
+            <div id="password_error" class="error"></div>
+        </div>
+        <!-------------------------------------------------------------------------------------------->
+        <div class="password_check">
+            <input id="password_check" type="password" placeholder="비밀번호를 다시 입력해주세요.">
+            <div id="password_check__error" class="error"></div>
+        </div>
+        <!-------------------------------------------------------------------------------------------->
+        <div class="phone">
+            <input id="phone1" type="text" size="1" maxlength="3" oninput="change_phone1()"> -
+            <input id="phone2" type="text" size="3" maxlength="4" oninput="change_phone1()"> -
+            <input id="phone3" type="text" size="3" maxlength="4" oninput="change_phone1()">
+        </div>
+        <!-------------------------------------------------------------------------------------------->
+        <div class="auth">
+            <div id="auth_number">00000</div>
+            <button disabled id="send_message" onclick="get_token()">인증번호 전송</button>
+        </div>
+        <!-------------------------------------------------------------------------------------------->
+        <div class="timer">
+            <div id="timer_limit">03:00</div>
+            <button disabled id="completion" onclick="check_completion()">인증확인</button>
+        </div>
+        <!-------------------------------------------------------------------------------------------->
+        <div class="area">
+            <select id="area">
+                <option disabled selected>지역을 선택하세요.</option>
+                <option>태양</option>
+                <option>해왕성</option>
+                <option>목성</option>
+            </select>
+            <div id="area_error" class="error"></div>
+        </div>
+        <!------------------------------------------------------------------------------------------->
+        <div class="gender">
+            <input id="gender_man" type="radio" name="gender">남성
+            <input id="gender_woman" type="radio" name="gender">여성
+            <div id="gender_error" class="error"></div>
+        </div>
+        <!------------------------------------------------------------------------------------------->
+        <div class="line">
+            <hr>
+        </div>
+        <!------------------------------------------------------------------------------------------->
+        <div class="sign_up">
+            <button ㅑㅇ="sign_up_button" disabled onclick="sign_up_check()">가입하기</button>
+        </div>
+        <!------------------------------------------------------------------------------------------->
+    </div>
+</body>
+</html>
